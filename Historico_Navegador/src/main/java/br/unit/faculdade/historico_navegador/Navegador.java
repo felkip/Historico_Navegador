@@ -12,6 +12,22 @@ public class Navegador {
         historicoAvancar = new String[capacidade];
         topoAvancar = -1;
     }
+
+    public String[] getHistorico() {
+        return historico;
+    }
+
+    public void setHistorico(String[] historico) {
+        this.historico = historico;
+    }
+
+    public String[] getHistoricoAvancar() {
+        return historicoAvancar;
+    }
+
+    public void setHistoricoAvancar(String[] historicoAvancar) {
+        this.historicoAvancar = historicoAvancar;
+    }
     
     public void visitarPagina(String url) {
         if (isFull()) {
@@ -59,5 +75,5 @@ public class Navegador {
     
     public boolean isFull() {
         return topo == historico.length - 1;
-    }
+    } 
 }
